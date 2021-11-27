@@ -51,7 +51,7 @@ def login_view(request):
 
     msg = None
     if request.user.is_authenticated:
-        return redirect("/map/")
+        return redirect("map/")
 
     elif request.method == "POST":
         form = LoginForm(data = request.POST or None)
@@ -61,7 +61,7 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect("/map/")
+                return redirect("map/")
             else:
                 msg = gettext('Invalid credentials')
                   
