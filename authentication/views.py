@@ -51,7 +51,7 @@ def login_view(request):
 
     msg = None
     if request.user.is_authenticated:
-        return redirect("map/")
+        return redirect("/map/")
 
     elif request.method == "POST":
         form = LoginForm(data = request.POST or None)
@@ -61,7 +61,7 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect("map/")
+                return redirect("/map/")
             else:
                 msg = gettext('Invalid credentials')
                   
@@ -362,7 +362,7 @@ def register_user_full(request):
 
     return render(request, "accounts/full_login.html", {"form": form, "msg" : msg, "success" : success })
 
-# @login_required(login_url="/login/")
+@login_required(login_url="/")
 def register_org(request):
 
     msg     = None
@@ -396,7 +396,7 @@ def register_org(request):
 
     return render(request, "accounts/register_org.html", {"form": form, "msg" : msg, "success" : success })
 
-@login_required(login_url="/login/")
+@login_required(login_url="/")
 def register_role(request):
 
     msg     = None
@@ -441,13 +441,13 @@ def register_role(request):
 
     return render(request, "accounts/register_role.html", {"form": form, "msg" : msg, "success" : success })
 
-@login_required(login_url="/login/")
+@login_required(login_url="/")
 def load_roles(request):
     org_id = request.GET.get('organization_name')
     roles = RemRole.objects.filter(organization=org_id)
     return render(request, 'accounts/role_options.html', {'roles': roles})
 
-@login_required(login_url="/login/")
+@login_required(login_url="/")
 def profile(request):
     rem_user = RemUser.objects.filter(username=request.user.username)
     rem_org = RemOrganization.objects.filter(id = rem_user.values()[0]['organization_id'])
@@ -467,7 +467,7 @@ def profile(request):
 #     context['segment'] = 'tables'
 #     return render(request, 'tables.html', context)
 
-@login_required(login_url="/login/")
+@login_required(login_url="/")
 def tables(request):
     context = {}
     companies = RemOrganization.objects.all()
@@ -483,7 +483,7 @@ def tables(request):
     context['segment'] = 'tables'
     return render(request, 'companies.html', context)
 
-@login_required(login_url="/login/")
+@login_required(login_url="/")
 def yields(request):
     context = {}
     yields_list = models.BeninYield.objects.filter(status = utils.Status.ACTIVE)
@@ -505,7 +505,7 @@ def yields(request):
     context['page_range'] = page_range
     return render(request, 'yield.html', context)
 
-@login_required(login_url="/login/")
+@login_required(login_url="/")
 def plantations(request):
     context = {}
     plantations_list = models.Plantation.objects.filter(status = utils.Status.ACTIVE)
@@ -528,7 +528,7 @@ def plantations(request):
 
     return render(request, 'plantations.html', context)
 
-@login_required(login_url="/login/")
+@login_required(login_url="/")
 def nurseries(request):
     context = {}
     nurseries_list = models.Nursery.objects.filter(status = utils.Status.ACTIVE)
@@ -550,7 +550,7 @@ def nurseries(request):
     context['page_range'] = page_range
     return render(request, 'nurseries.html', context)
 
-@login_required(login_url="/login/")
+@login_required(login_url="/")
 def shipment(request):
     context = {}
     nurseries_list = models.Nursery.objects.filter(status = utils.Status.ACTIVE)
@@ -572,7 +572,7 @@ def shipment(request):
     context['page_range'] = page_range
     return render(request, 'shipment.html', context)
 
-@login_required(login_url="/login/")
+@login_required(login_url="/")
 def drone(request, plant_id, coordinate_xy):
     basemaps = {
                     'Google Maps': folium.TileLayer(

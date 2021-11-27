@@ -135,7 +135,7 @@ class my_home():
         return context
 
 
-@login_required(login_url="/login/")
+@login_required(login_url="/")
 def index(request):
    
     path_link = request.path
@@ -147,7 +147,7 @@ def index(request):
     return HttpResponse(html_template.render(context, request))
 
 
-@login_required(login_url="/login/")
+@login_required(login_url="/")
 def pages(request):
     context = {}
     # All resource paths end in .html.
