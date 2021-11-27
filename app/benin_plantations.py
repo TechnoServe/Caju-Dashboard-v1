@@ -99,9 +99,9 @@ def add_benin_plantation(self, path_link, dept_yieldHa):
     for count, feature in enumerate(temp_geojson_a.data['features']):
         # GEOJSON layer consisting of a single feature
         
-        if count > 463:
-            break
-        code = feature["properties"]["Plantation code"]
+        # if count > 463:
+        #     break
+        # code = feature["properties"]["Plantation code"]
         
         items = len(SpecialTuple.objects.filter(alteia_id=code))
         if items != 0:
