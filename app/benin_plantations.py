@@ -101,7 +101,7 @@ def add_benin_plantation(self, path_link, dept_yieldHa):
         
         # if count > 463:
         #     break
-        # code = feature["properties"]["Plantation code"]
+        code = feature["properties"]["Plantation code"]
         
         items = len(SpecialTuple.objects.filter(alteia_id=code))
         if items != 0:
