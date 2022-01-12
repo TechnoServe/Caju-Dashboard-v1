@@ -24,7 +24,7 @@ msgstr "Communes du Bénin"
 
 #: .\app\benin_commune.py:27 .\app\benin_republic.py:30
 msgid "Departments Cashew Tree Cover Statistics In"
-msgstr "Départements Statistiques de Couverture des Anacardiers en"
+msgstr "Statistiques sur la couverture des anacardiers dans les départements"
 
 #: .\app\benin_commune.py:28 .\app\benin_department.py:34
 #: .\app\benin_republic.py:31
@@ -69,7 +69,7 @@ msgstr "Enquête de TNS"
 #: .\app\benin_commune.py:38 .\app\benin_department.py:45
 #: .\app\benin_republic.py:42
 msgid "Total Cashew Yield (kg)"
-msgstr "Rendement Total de Noix de Cajou (kg)"
+msgstr "Rendement Total des Noix de Cajou (kg)"
 
 #: .\app\benin_commune.py:39 .\app\benin_department.py:46
 #: .\app\benin_republic.py:43
@@ -106,8 +106,8 @@ msgid ""
 "among Benin communes in terms of total cashew yield according to the TNS "
 "Yield Survey"
 msgstr ""
-"parmi les communes béninoises en termes de rendement total de cajou selon "
-"l'enquête de rendement TNS"
+"parmi les communes du Bénin en termes de rendement total en anacarde selon le TNS"
+"l'enquête de rendement"
 
 #: .\app\benin_department.py:23
 msgid "Benin Departments"
@@ -115,7 +115,7 @@ msgstr "Départements du Bénin"
 
 #: .\app\benin_department.py:52
 msgid "Predicted Cashew Tree Cover Communes Statistics In"
-msgstr "Couverture prevue de l anacardier statistiques des Communes En"
+msgstr "Statistiques sur la couverture prévue des anacardiers dans les communes en "
 
 #: .\app\benin_department.py:53
 msgid ""
@@ -147,11 +147,11 @@ msgstr "Estimation Satellite"
 
 #: .\app\benin_plantations.py:31
 msgid "2020 Yield Survey"
-msgstr "Enquête de Rendement 2020"
+msgstr "Enquête sur le Rendement 2020"
 
 #: .\app\benin_plantations.py:32
 msgid "Cashew Yield (kg)"
-msgstr "Rendement de Noix de cajou (kg)"
+msgstr "Rendement des Noix de cajou (kg)"
 
 #: .\app\benin_plantations.py:33
 msgid "Plantation Size (ha)"
@@ -170,8 +170,8 @@ msgid ""
 "Average Surface Area and Cashew Yield Information for Plantations in Benin "
 "Republic"
 msgstr ""
-"Information sur la superficie moyenne et le rendement de noix de cajou des "
-"plantations en République du Bénin"
+"Information sur la superficie moyenne et le rendement de noix de cajou dans les plantations du Benin "
+"République"
 
 #: .\app\benin_plantations.py:40
 msgid "Number of Farms"
@@ -211,7 +211,7 @@ msgstr "République du Bénin"
 
 #: .\app\benin_republic.py:37
 msgid "globally in terms of total cashew yield"
-msgstr "à l'échelle mondiale en termes de rendement total de noix de cajou"
+msgstr "au niveau mondial en termes de rendement total de cajou"
 
 #: .\app\benin_republic.py:48
 msgid "9th"
@@ -227,7 +227,7 @@ msgstr "Propriétaire de la Pépinière"
 
 #: .\app\nursery_information.py:12
 msgid "Nursery Area (ha)"
-msgstr "Superficie de la Pépinière (ha)"
+msgstr "Zone de pépinière (ha)"
 
 #: .\app\nursery_information.py:13 .\core\templates\nurseries.html:59
 msgid "Number of Plants"
@@ -311,7 +311,7 @@ msgstr "Le formulaire n'est pas valide"
 
 #: .\authentication\views.py:175
 msgid "Password change successful. Now you can"
-msgstr "Changement de mot de passe réussi. Maintenant vous pouvez"
+msgstr "Changement de mot de passe réussi. Vous pouvez maintenant"
 
 #: .\authentication\views.py:224
 msgid "Activate your Cashew Remote Sensing account."
@@ -759,7 +759,7 @@ msgstr "Chercher"
 
 #: .\core\templates\includes\navigation-fullscreen.html:60
 msgid "Caju-Support"
-msgstr "Caju-Soutien"
+msgstr "Soutien-Caju"
 
 #: .\core\templates\includes\navigation.html:43
 msgid "You have"

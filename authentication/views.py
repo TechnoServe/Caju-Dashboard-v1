@@ -242,7 +242,7 @@ def register_user(request):
             email = EmailMessage(
                 mail_subject, 
                 message, 
-                from_email = '"Caju-Lab Support" <cajusupport@tnslabs.org>',
+                from_email = '"Caju-Lab Support" <tnslabs2021@gmail.com>',
                 to=[to_email]
             )
             email.content_subtype = "html"
